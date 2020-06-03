@@ -2,8 +2,8 @@
 require 'enviroment.php';
 
 if(ENVIROMENT == 'development'){
-    define("BASE_URL", "http://localhost/projetoEnfermagem/");
-    $config['dbname'] = "projetoEnfermagem";
+    define("BASE_URL", "http://localhost/souenfermagem/");
+    $config['dbname'] = "sou_enfermagem";
     $config['host'] = "localhost";
     $config['dbuser'] = "root";
     $config['dbpass'] = "";

@@ -1,0 +1,239 @@
+body{
+    background-color: #F4F4F4;
+}
+
+#banner_home{
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(-225deg, rgba(21,121,173,0.5) 0%, rgba(15, 145, 53,0.5) 20%),url(../images/banner-home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner_text{
+    width: 50%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 55px;
+    color: white;
+    text-shadow: 0px 0px 30px #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#banner_btn_area{
+    width: 50%;
+    display: flex;
+    margin-top: 30px;
+}
+
+#banner_btn{
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    width: 200px;
+    height: 50px;
+    background-color: #005BB6;
+    text-align: center;
+    line-height: 47px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#banner_btn:hover{
+    background-color: #012142;
+}
+
+#sub_banner_area{
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: white;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+}
+
+#row_sub_banner{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box_sb{
+    width: 30%;
+}
+
+.top_sb{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top_sb img{
+    height: 28px;
+}
+
+.tittle_sb{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #22B14C;
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text_sb{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 36px;
+    font-size: 15px;
+}
+
+#title_last_jobs{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #4A4A4A;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#last_jobs_area{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.job_box{
+    background-color: white;
+    margin-bottom: 250px;
+    width: 360px;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+    margin: 0px 20px 0px 20px;
+}
+
+.img_enterprise_area{
+    text-align: center;
+    padding: 25px 0px 25px 0px;
+    border-bottom: solid 1px #DEDEDE;
+}
+
+
+
+.img_enterprise{
+    height: 100px;
+    text-align: center;
+}
+
+.job_name{
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    padding: 20px 10px 20px 10px;
+    word-wrap: break-word;
+    color: #22B14C;
+}
+
+.enterprise_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+}
+
+.enterprise_name{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 4px;
+    margin-left: 10px;
+    color: #808080;
+}
+
+.enterprise_row  img{
+    height: 20px;
+}
+
+.adress_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 15px 0px 13px;
+    margin-bottom: 25px;
+}
+
+.adress_name{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 4px;
+    margin-left: 8px;
+    color: #808080;
+}
+
+.tags_area{
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tags{
+    border: 1px solid #22B14C;
+    border-radius: 15px;
+    padding: 5px 8px 5px 8px;
+    color: #22B14C;
+    font-family: 'Noto Sans KR', sans-serif;
+    cursor: pointer;
+    word-wrap: break-word;
+    margin: 0px 0px 10px 0px;
+}
+
+#btn_all_jobs{
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    width: 200px;
+    height: 50px;
+    background-color: #005BB6;
+    text-align: center;
+    line-height: 47px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    transition: 0.2s;
+}
+
+#btn_all_jobs:hover{
+    background-color: #012142;
+}
+
+
+@media screen and (max-width: 520px){
+    #banner_home{
+        height: 40vh;
+    }
+
+    #banner_text{
+        font-size: 35px;
+    }
+
+    #banner_btn{
+        font-size: 19px;
+        font-size: 
+        width: 200px;
+        height: 50px;
+    }
+
+}
