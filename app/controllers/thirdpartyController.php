@@ -1,7 +1,7 @@
 <?php
 class thirdpartyController extends controllerHelper{
     public function facebook(){
-        require $_SERVER['DOCUMENT_ROOT'].'/souenfermagem/app/assets/libraries/Facebook/autoload.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/benurse/app/assets/libraries/Facebook/autoload.php';
         $DBuser = new User();
 
         $fb = new Facebook\Facebook([

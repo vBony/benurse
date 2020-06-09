@@ -1,49 +1,26 @@
 <div id="banner_home">
-    <div id="banner_text">Oportunidades para<br>Enfermeiros e<br>Técnicos de enfermagem</div>
-    <div id="banner_btn_area"><div id="banner_btn"><strong>Ver nossas vagas</strong></div></div>
-</div>
-<div id="sub_banner_area">
-    <div id="row_sub_banner">
-        <div class="box_sb">
-            <div class="top_sb">
-                <img src="<?=BASE_URL?>app/assets/images/confirmed-icon.png" alt="">
-                <div class="tittle_sb">Só para enfermeiros</div>
-            </div>
-            <div class="bot_sb">
-                <div class="text_sb">
-                    Somos uma plataforma 100% dedicada ao recrutamento
-                    de enfermeiros, técnicos e auxiliares de enfermagem.
-                </div>
-            </div>
+    <div id="banner_inv">
+        <div id="banner_title">As melhores vagas para <br>
+            <span id="banner-enf" class="text-banner">Enfermeiros</span>
+            <span id="banner-aux" class="text-banner">Auxiliares de enfermagem</span>
+            <span id="banner-tec" class="text-banner">Técnicos de enfermagem</span>
         </div>
-
-        <div class="box_sb">
-            <div class="top_sb">
-                <img src="<?=BASE_URL?>app/assets/images/confirmed-icon.png" alt="">
-                <div class="tittle_sb">Só para enfermeiros</div>
+        <div id="box-banner">
+            <div id="banner_text">
+                Chega de correr atrás de vagas em diversos lugares. Crie seu
+                perfil grátis e ganhe visibilidade de diversas empresas. Economize tempo.
             </div>
-            <div class="bot_sb">
-                <div class="text_sb">
-                    Somos uma plataforma 100% dedicada ao recrutamento
-                    de enfermeiros, técnicos e auxiliares de enfermagem.
-                </div>
-            </div>
-        </div>
-
-        <div class="box_sb">
-            <div class="top_sb">
-                <img src="<?=BASE_URL?>app/assets/images/confirmed-icon.png" alt="">
-                <div class="tittle_sb">Só para enfermeiros</div>
-            </div>
-            <div class="bot_sb">
-                <div class="text_sb">
-                    Somos uma plataforma 100% dedicada ao recrutamento
-                    de enfermeiros, técnicos e auxiliares de enfermagem.
-                </div>
+            <div id="banner_email">
+                <input type="email" name="email" id="input-email" placeholder="Insira seu e-mail" class="">
+                <button id="btn-banner">CRIAR CONTA</button><br>
+                <div id="msg-error"></div>
             </div>
         </div>
     </div>
 </div>
+
+<div id="title_benefs">Por que utilizar a benurse?</div>
+
 
 <div id="title_last_jobs">Nossas últimas vagas</div>
 

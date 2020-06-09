@@ -1,6 +1,6 @@
 $( document ).ready(function(){
 
-    var base_url = 'http://localhost//souenfermagem/'
+    var base_url = 'http://localhost/benurse/'
 
 
     $('#drop_down_cadastro').hide();

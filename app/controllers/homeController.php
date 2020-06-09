@@ -4,6 +4,7 @@ class homeController extends controllerHelper{
         $data = array();
         $data['css'] = 'home.css';
         $data['js'] = 'home.js';
+        $data['title'] = 'benurse: Plataforma para enfermeiros';
         $this->loadTemplate('home', $data);
     }
 
