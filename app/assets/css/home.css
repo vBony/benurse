@@ -39,6 +39,8 @@ body{
     position: absolute;
     opacity: 0;
     animation: fader 9s infinite;
+    color: #20b1fc;
+    text-shadow: 3px 2px 2px #005BB6;
 }
 
 #banner-enf{animation-delay: 0s;}
@@ -80,7 +82,7 @@ body{
     height: 40px;
     border-radius: 5px;
     padding-left: 15px;
-    border: 2px solid white;
+    border: 2px solid #005BB6;
 }
 
 #input-email::placeholder{
@@ -112,15 +114,44 @@ body{
     border-radius: 5px;
 }
 
-#title_benefs{
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #4A4A4A;
-    text-align: center;
-    font-size: 35px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+#sub-banner-area{
+    margin: 50px auto 50px auto;
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom: 8px solid #22B14C;
+    border-right: 8px solid #22B14C;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
 }
 
+#sub-banner-inv{
+    margin: 0px auto 0px auto;
+}
+
+#sub-banner-title{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #22B14C;
+    text-align: left;
+    font-size: 50px;
+    padding: 10px 0px 10px 0px;
+    margin-left: 20px;
+}
+
+#sub-banner-text{
+    width: 80%;
+    font-family: "Open Sans";
+    color: #4A4A4A;
+    text-align: left;
+    margin: 10px 0px 20px 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#sub-banner-text p{
+    margin-bottom: 10px;
+}
 
 #title_last_jobs{
     font-family: 'Noto Sans KR', sans-serif;
@@ -130,6 +161,8 @@ body{
     margin-top: 60px;
     margin-bottom: 60px;
 }
+
+
 
 #last_jobs_area{
     width: fit-content;
@@ -246,6 +279,76 @@ body{
 
 #btn_all_jobs:hover{
     background-color: #012142;
+}
+
+.search-area{
+    width: 100%;
+    background-color: #22B14C;
+}
+
+.search-inv{
+    width: 70%;
+    margin: auto;
+    padding: 40px;
+}
+
+#form-search{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-title{
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#selects-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 20px 0px;
+}
+
+.select-search{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    height: 50px;
+    border: 2px solid #005BB6;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#select-cargo{
+    width: 60%;
+}
+
+#select-estado{
+    width: 30%;
+    margin-left: 20px;
+}
+
+#btn-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-search{
+    padding: 5px 10px 5px 10px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px solid #005BB6;
+    background-color: #20b1fc;
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 

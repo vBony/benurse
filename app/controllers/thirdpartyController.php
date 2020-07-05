@@ -49,23 +49,12 @@ class thirdpartyController extends controllerHelper{
         }
 
         $FBid = $FBuser->getId();
+        $_SESSION['fb-id'] = $FBid;
         $FBemail = $FBuser['email'];
         $FBname = $FBuser['name'];
 
-        if($DBuser->facebookVerifier($FBid, $FBemail) != false){
-            $userData = $DBuser->facebookVerifier($FBid, $FBemail);
-
-            //Verifica se é o primeiro acesso do usuário, se caso for, ir para pagina para continuar o cadastro
-            if($userData['first_access'] == 1){
-                $_SESSION['ID_user'] = $userData['id'];
-                header('Location:'.BASE_URL.'user/first_access');
-            }else{
-                header('Location: '.BASE_URL);
-            }
-
-        }else{
-           $DBuser->facebookRegister($FBid, $FBemail, $FBname);
-           header('Location:'.BASE_URL.'user/first_access');
+        if($DBuser->facebookLogin($FBid, $FBemail, $FBname)){
+            header('Location: '.BASE_URL.'user/feed');
         }
 
         // //Listagem de dados

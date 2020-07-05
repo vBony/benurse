@@ -59,7 +59,7 @@ input:hover{
     width: 100%;
 }
 
-#session_nome{
+#session_login{
     width: 500px;
     margin: 40px 50px 40px 40px;
 }
@@ -128,19 +128,19 @@ input:hover{
     background-color: #012142;
 }
 
-#login-area{
+#register-area{
     width: 100%;
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
     margin-top: 30px;
 }
 
-#login-area a{
+#register-area a{
     color: #17A2B8;
     text-decoration: none;
 }
 
-#login-area a:hover{
+#register-area a:hover{
     text-decoration: underline;
 }
 
