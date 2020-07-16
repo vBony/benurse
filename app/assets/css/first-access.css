@@ -44,11 +44,6 @@ input:hover{
     margin: auto;
 }
 
-#app-area{
-    width: fit-content;
-    background-color: white;
-    border-radius: 5px;
-}
 
 #container{
     display: flex;
@@ -59,9 +54,9 @@ input:hover{
     width: 100%;
 }
 
-#session_login{
-    width: 500px;
-    margin: 40px 50px 40px 40px;
+.input-group{
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .label-default{
@@ -81,7 +76,7 @@ input:hover{
     width: 95%;
     height: 30px;
     padding-left: 10px;
-    border-color: red;
+    border:1px solid red;
     margin: 0px auto 0px auto;
     transition: 0.2s;
 }
@@ -94,17 +89,7 @@ input:hover{
     color: red;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 13px;
-    margin-bottom: 18px;
     height: 15px;
-    transition: 0.2s;
-}
-
-#btn-sou_empresa{
-    color: white;
-    text-decoration: none;
-    font-family: 'Nunito Sans', sans-serif;
-    margin-top: 40px;
-    font-size: 20px;
     transition: 0.2s;
 }
 
@@ -121,7 +106,7 @@ input:hover{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     text-align: center;
-    margin: auto;
+    margin: 30px auto 0px auto;
     cursor: pointer;
     transition: 0.2s;
 
@@ -132,78 +117,13 @@ input:hover{
     background-color: #012142;
 }
 
-#register-area{
-    width: 100%;
-    font-family: 'Nunito Sans', sans-serif;
-    text-align: center;
-    margin-top: 30px;
-}
-
-#register-area a{
-    color: #17A2B8;
-    text-decoration: none;
-}
-
-#register-area a:hover{
-    text-decoration: underline;
-}
-
-#divisor-area{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-#lines{
-    width: 40%;
-    height: 1px;
-    cursor: default;
-    background-color: #7d7d7d;
-}
-
-#txt-divisor{
-    margin: auto;
-    width: fit-content;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #7d7d7d;
-    cursor: default;
-}
-
-#FBLoginBtn {
-    display: flex;
-    flex-direction: row;
-    margin: 0px auto 30px auto;
-    width: 100%;
-    height: 40px;
-    background-color: #1877F2;
-    color: white;
-    text-decoration: white;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-}
-
-#FBLoginBtn img{
-    height: 30px;
-    margin-right: 20px;
-}
-
-#FBLBText {
-    font-weight: 500;
-    line-height: 40px;
-    word-spacing: 1px;
-    font-size: 14px;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-#link-fblogin{
-    text-decoration: none;
-}
-
 /* BOX SHADOW */
+#app-area{
+    width: fit-content;
+    background-color: white;
+    border-radius: 5px;
+}
+
 #app-area
 {
     position:relative;
@@ -235,4 +155,94 @@ input:hover{
         -ms-transform:skew(8deg) rotate(3deg);
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
+}
+
+
+/* SESSION PERSONAL DATA */
+#session-personal-data{
+    width: 780px;
+    padding: 40px;
+}
+
+#image{
+    display: none;
+}
+
+#preview-area{
+    width: 31.3%;
+    border: 1px solid #4A4A4A;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-area:hover{
+    outline: black 2px solid;
+}
+
+.preview-error{
+    width: 31.3%;
+    border: 1px solid red !important; 
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-error:hover{
+    border: 1px solid red !important;
+}
+
+#uploaded-img{
+    height: 100px;
+}
+
+.fas.fa-camera{
+    font-size: 50px;
+}
+
+#cpf, #tel, #cep{
+    width: 30%;
+}
+
+.cidade_estado{
+    display: flex;
+    flex-direction: row;
+}
+
+.cidade_estado input{
+    border: none !important;
+    margin: 0px !important;
+    padding-left: 10px !important;
+    font-weight: bold;
+    background-color: white;
+}
+
+#bairro{
+    border: none !important;
+    margin: 0px !important;
+    padding-left: 10px !important;
+    font-weight: bold;
+    background-color: white;
+}
+
+.cidade_estado input:hover{
+    border: none !important;
+}
+
+#estado{
+    width: fit-content;
+    margin-left: 20px !important;
+}
+
+#cidade{
+    width: fit-content;
+}
+
+#show-data-cep{
+    display: none;
+    margin-bottom: 10px;
 }

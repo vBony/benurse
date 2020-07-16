@@ -28,8 +28,13 @@ class userController extends controllerHelper{
             $userObj = new User();
             $user_data = $userObj->getAllDataUser($_SESSION['user-id']);
 
+            $first_name = explode(" " ,$user_data[0]['username']);
+            $first_name = $first_name[0];
+
             $data = array();
             $data['user'] = $user_data;
+            $data['first_name'] = $first_name;
+            $data['cargos'] = $userObj->getAllCargos();
 
             $this->loadView('first-access', $data);
         }
@@ -42,9 +47,14 @@ class userController extends controllerHelper{
             $data = array();
             $data['css'] = 'user-feed.css';
             $data['js'] = 'user-feed.js';
-            $data['user'] = $user_data;
+            
 
             $user_data = $userObj->getAllDataUser($_SESSION['user-id']);
+            $data['user'] = $user_data;
+
+            $first_name = explode(" " ,$user_data[0]['username']);
+            $first_name = $first_name[0];
+            $data['first_name'] = $first_name;
 
             if($user_data[0]['first_access'] == 1){
 

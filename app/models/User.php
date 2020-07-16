@@ -107,6 +107,64 @@ class User extends modelHelper{
 
         return $data_user;
     }
+
+    public function getAllCargos(){
+        $sql = "SELECT * FROM cargos";
+        $sql = $this->db->query($sql);
+        $sql->execute();
+
+        $data_user = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $data_user;
+    }
+
+    public function insertPersonalDataUser($user_id, $foto, $cpf, $telefone, $cep, $cidade, $estado, $bairro, $cargo_id, $pcd){
+        $this->insertProfilePhoto($foto);
+
+        $sql = "UPDATE users SET
+        first_access = 0,
+        cpf= :cpf,
+        telefone= :telefone,
+        cep= :cep,
+        cidade= :cidade,
+        estado= :estado,
+        bairro= :bairro,
+        cargo_id= :cargo_id,
+        pcd= :pcd
+        WHERE id= :id";
+
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(':cpf', $cpf);
+        $sql->bindValue(':telefone', $telefone);
+        $sql->bindValue(':cep', $cep);
+        $sql->bindValue(':cidade', $cidade);
+        $sql->bindValue(':estado', $estado);
+        $sql->bindValue(':bairro', $bairro);
+        $sql->bindValue(':cargo_id', $cargo_id);
+        $sql->bindValue(':pcd', $pcd);
+        $sql->bindValue(':id', $user_id);
+        $sql->execute();
+
+        return true;
+    }
+
+    public function insertProfilePhoto($foto){
+        $nome_arquivo = '';
+
+        if($foto['type'] == 'image/jpeg'){
+            move_uploaded_file($foto['tmp_name'], 'app/assets/images/profile_photos/'.md5($_SESSION['user-id']).'.jpg');
+            $nome_arquivo = md5($_SESSION['user-id']).'.jpg';
+        }elseif($foto['type'] == 'image/png'){
+            move_uploaded_file($foto['tmp_name'], 'app/assets/images/profile_photos/'.md5($_SESSION['user-id']).'.png');
+            $nome_arquivo = md5($_SESSION['user-id']).'.png';
+        }
+
+        $sql = 'UPDATE users SET profile_photo= :foto WHERE id = :id';
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(':foto', $nome_arquivo);
+        $sql->bindValue(':id', $_SESSION['user-id']);
+        $sql->execute();
+    }
 }
 
 
