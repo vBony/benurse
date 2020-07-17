@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login como candidato</title>
+    <title>benurse | Informações pessoais</title>
     <script src="<?=BASE_URL?>app/assets/js/jquery.js"></script>
     <script src="<?=BASE_URL?>app/assets/js/user-data-form-register.js"></script>
     <link rel="stylesheet" href="<?=BASE_URL?>app/assets/css/first-access.css">
@@ -22,6 +22,8 @@
     <div id="container">
         <div id="app-area">
             <form method="post" id="session-personal-data">
+                <div class="title-session">Dados pessoais</div>
+
                 <div class="input-group">
                     <div class="label-default">Selecione uma foto de perfil</div>
                     <input type="file" id="image" name="image">
@@ -34,20 +36,26 @@
                 </div>
 
                 <div class="input-group">
+                    <div class="label-default">Idade</div>
+                    <input type="text" id="idade" class='input-default' placeholder='Ex: 20'>
+                    <div class="error-msg idade"></div>
+                </div>
+
+                <div class="input-group">
                     <div class="label-default">CPF</div>
-                    <input type="text" id="cpf" class='input-default'>
+                    <input type="text" id="cpf" class='input-default' placeholder='000.000.000-00'>
                     <div class="error-msg cpf"></div>
                 </div>
 
                 <div class="input-group">
                     <div class="label-default">Telefone</div>
-                    <input type="text" id="tel" class='input-default'>
+                    <input type="text" id="tel" class='input-default' placeholder='00 00000-0000'>
                     <div class="error-msg telefone"></div>
                 </div>
 
                 <div class="input-group">
                     <div class="label-default">CEP</div>
-                    <input type="text" id="cep" class='input-default'>
+                    <input type="text" id="cep" class='input-default' placeholder='00000-000'>
                     <div class="error-msg cep"></div>
                 </div>
 
@@ -87,6 +95,19 @@
                 <input type="submit" value="Enviar e continuar" class="btn-continuar">
                 
             </form>
+            
+            <form method="post" id="session-experiences">
+                <div class="title-session">Experiências</div>
+                <div class="input-group no-exp">
+                    <input type="checkbox">
+                    <span>Não tenho experiência profissional</span>
+                </div>
+
+
+                <input type="submit" value="Enviar e terminar" class="btn-continuar">
+                
+            </form>
+
         </div>
     </div>
 

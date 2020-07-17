@@ -118,12 +118,12 @@ class User extends modelHelper{
         return $data_user;
     }
 
-    public function insertPersonalDataUser($user_id, $foto, $cpf, $telefone, $cep, $cidade, $estado, $bairro, $cargo_id, $pcd){
+    public function insertPersonalDataUser($user_id, $foto, $cpf, $idade, $telefone, $cep, $cidade, $estado, $bairro, $cargo_id, $pcd){
         $this->insertProfilePhoto($foto);
 
         $sql = "UPDATE users SET
-        first_access = 0,
         cpf= :cpf,
+        idade= :idade,
         telefone= :telefone,
         cep= :cep,
         cidade= :cidade,
@@ -135,6 +135,7 @@ class User extends modelHelper{
 
         $sql = $this->db->prepare($sql);
         $sql->bindValue(':cpf', $cpf);
+        $sql->bindValue(':idade', $idade);
         $sql->bindValue(':telefone', $telefone);
         $sql->bindValue(':cep', $cep);
         $sql->bindValue(':cidade', $cidade);

@@ -8,11 +8,21 @@ $(document).ready(function(){
     $('#cpf').mask('000.000.000-00');
     $('#tel').mask('00 00000-0000');
     $('#cep').mask('00000-000');
+    $('#idade').mask('00');
+
+    $('#idade').on('keyup', function(){
+        var idade = $(this).val().replace(/\D/g, '');
+    });
 
     $('#cep').on('focus', function(){
         $(this).removeClass('input-error').addClass('input-default');
         $('.error-msg.cep').text('');
     })
+
+    $('#idade').on('focus', function(){
+        $(this).removeClass('input-error').addClass('input-default');
+        $('.error-msg.idade').text('');
+    });
 
     $('#cpf').on('focus', function(){
         $(this).removeClass('input-error').addClass('input-default');
@@ -30,6 +40,9 @@ $(document).ready(function(){
     })
 
     $('#image').on('change', function(event){
+        $('.error-msg.image').text('');
+        $('#preview-area').removeClass('preview-error');
+
         var reader = new FileReader();
 
         reader.onload = function(){
@@ -84,6 +97,9 @@ $(document).ready(function(){
         var foto = $('#image')[0].files;
         var validaIMG = false;
 
+        var idade = $('#idade').val();
+        var valida_idade = false;
+
         var cep = $('#cep').val();
         var cidade = $('#cidade').val();
         var estado = $('#estado').val();
@@ -100,6 +116,15 @@ $(document).ready(function(){
         var valida_cargo_desejado = false;
         
         var pcd = $('#pcd-select').val();
+
+        if(idade < 17 || idade > 100){
+            $('#idade').removeClass('input-default').addClass('input-error');
+            $('.error-msg.idade').text('Idade inválida ou insuficiente');
+        }else{
+            $('#idade').removeClass('input-error');
+            $('.error-msg.idade').text('');
+            valida_idade = true;
+        }
 
         if(foto.length === 0){
             $('#preview-area').addClass('preview-error');
@@ -152,6 +177,7 @@ $(document).ready(function(){
 
             data.append('foto', foto[0]);
             data.append('cpf', cpf);
+            data.append('idade', idade);
             data.append('telefone', tel);
             data.append('cep', cep);
             data.append('cidade', cidade);
@@ -167,16 +193,18 @@ $(document).ready(function(){
                 cache: false,
                 contentType: false,
                 processData: false,
+                dataType: 'json',
                 success: function(json){
                     if(json.msg === 'done'){
-                        // window.location.href = base_url;
-                    }else{
-                        alert('Error');
+                        $('#session-personal-data').fadeOut('100000');
+                        $('#session-experiences').show();
+                    }
+                    if(json.msg === 'error-photo'){
+                        $('.error-msg.image').text('Formato inválido ou maior que 1mb');
+                        $('#preview-area').addClass('preview-error');
                     }
                 }
             });
-        }else{
-            alert("Ops");
         }
     });
 });

@@ -89,6 +89,7 @@ class ajaxController extends controllerHelper{
 
         $foto = $_FILES['foto'];
         $cpf = strip_tags($_POST['cpf']);
+        $idade = strip_tags($_POST['idade']);
         $telefone = strip_tags($_POST['telefone']);
         $cep = strip_tags($_POST['cep']);
         $cidade = strip_tags($_POST['cidade']);
@@ -97,14 +98,19 @@ class ajaxController extends controllerHelper{
         $cargo_id = strip_tags($_POST['cargo_id']);
         $pcd = strip_tags($_POST['pcd']);
 
-        if($userObj->insertPersonalDataUser($user_id, $foto, $cpf, $telefone, $cep, $cidade, $estado, $bairro, $cargo_id, $pcd)){
-            // $ajax_response['msg'] = 'done';
-            // echo json_encode($ajax_response);
-
-            print_r($foto);
+        if($foto['type'] == 'image/png' || $foto['type'] == 'image/jpeg' && $foto['size'] <= 1000000){
+            if($userObj->insertPersonalDataUser($user_id, $foto, $cpf, $idade, $telefone, $cep, $cidade, $estado, $bairro, $cargo_id, $pcd)){
+                $ajax_response['msg'] = 'done';
+                echo json_encode($ajax_response);
+            }else{
+                $ajax_response['msg'] = 'error';
+                echo json_encode($ajax_response);
+            }
         }else{
-            $ajax_response['msg'] = 'error';
+            $ajax_response['msg'] = 'error-photo';
             echo json_encode($ajax_response);
         }
+
+        
     }
 }

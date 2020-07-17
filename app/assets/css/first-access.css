@@ -18,12 +18,12 @@ body{
 
 textarea:focus, input:focus, select:focus{
     box-shadow: 0 0 0 0;
-    border: 2px solid black;
+    border: 1px solid black;
     outline: 0;
 }
 
 input:hover{
-    border: 2px solid black;
+    outline: 1px solid rgb(88, 88, 88);
 }
 
 #fixed-bg{
@@ -70,6 +70,7 @@ input:hover{
     padding-left: 10px;
     margin: 0px auto 0px auto;
     transition: 0.2s;
+    border: 1px solid #4A4A4A;
 }
 
 .input-error{
@@ -158,10 +159,19 @@ input:hover{
 }
 
 
+.title-session{
+    font-size: 25px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
 /* SESSION PERSONAL DATA */
 #session-personal-data{
     width: 780px;
     padding: 40px;
+    display: none;
 }
 
 #image{
@@ -179,7 +189,7 @@ input:hover{
 }
 
 #preview-area:hover{
-    outline: black 2px solid;
+    outline: black 1px solid;
 }
 
 .preview-error{
@@ -204,7 +214,7 @@ input:hover{
     font-size: 50px;
 }
 
-#cpf, #tel, #cep{
+#cpf, #tel, #cep, #idade{
     width: 30%;
 }
 
@@ -245,4 +255,22 @@ input:hover{
 #show-data-cep{
     display: none;
     margin-bottom: 10px;
+}
+
+
+/* SESSION EXPERIENCES */
+#session-experiences{
+    /* display: none; */
+
+    width: 780px;
+    padding: 40px;
+}
+
+.input-group.no-exp{
+    margin-bottom: 10px;
+}
+
+.input-group.no-exp span{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
 }
